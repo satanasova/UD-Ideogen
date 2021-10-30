@@ -1,3 +1,92 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;800&display=swap');
 
+@import '../sass/variables';
+@import '../sass/header';
+
+* {
+    box-sizing: border-box !important;
+}
+
+//header
+header {
+    font-family: $font_secondary;
+    font-size: $font-small;
+    nav {
+        ul.nav {
+            li:not(:last-child){
+                    &::after {
+                        content: '|';
+                    }
+                }
+        }
+    }
+    .btn {
+        font-size: $font-small;
+    }
+}
+
+//hero
+.hero {
+    height: 1000px;
+    z-index: -1;
+    background-image: url('../../images/hero.png');
+    background: linear-gradient(to bottom, white 7%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 55%, white 100%), url('../../images/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .blobs {
+        width: max-content;
+        position: absolute;
+        svg:first-child() {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite ;
+        }
+        svg:nth-child(2) {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite alternate-reverse;
+        }
+        svg:last-child() {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite;
+        }
+        &-start {
+            top: 15%;
+            left: -20px;
+        }
+        &-end {
+            top: 30%;
+            right: -20px;
+        }
+    }
+}
+
+//animations
+@keyframes flying {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(20px, 30px);
+    }   
+    50% {
+        transform: translate(-10px, -10px);
+    }
+    75% {
+        transform: translate(-20px, 40px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+//counters
+
+//history
+.parallax-window {
+    background: transparent;
+}
+
+//team
+
