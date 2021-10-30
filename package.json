@@ -1,0 +1,30 @@
+{
+  "name": "ideogen",
+  "version": "1.0.0",
+  "description": "\"# Ideogen\"",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "node-sass assets/styles/sass/main.scss assets/styles/css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch-sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satanasova/Ideogen.git"
+  },
+  "author": "Siyana Atanasova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satanasova/Ideogen/issues"
+  },
+  "homepage": "https://github.com/satanasova/Ideogen#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "jquery-parallax.js": "^1.5.0"
+  }
+}
