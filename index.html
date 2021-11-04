@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timeline.css/1.0/timeline.css" integrity="sha512-peBlbZvA0pwrClPrADUcxsevEPKaoAoJ6YN3MvBLKBwoTBygRXPSesFjUiI5YhQDjIzsw9Jg/eZ0rX1IllVJCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="assets/styles/css/style.css">
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" defer></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" defer></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" defer></script> -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js" defer></script>
+
     <script type="module" src="assets/scripts/script.js"></script>
 
     <title>Siyana Atanasova - Landing Page 101</title>
@@ -50,7 +55,7 @@
 
     </header>
 
-    <section class="hero w-100 overflow-hidden position-relative">
+    <section class="hero overflow-hidden position-relative">
         <div class="blobs blobs-start">
             <svg class="position-absolute start-0" width="133" height="377" viewBox="0 0 133 377" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.67" d="M45.0655 123.388C89.3305 175.444 139.242 221.519 131.486 258.966C124.046 296.429 59.5688 325.293 11.6144 345.07C-36.025 364.862 -67.1416 375.566 -100.016 376.653C-133.189 377.396 -167.79 368.209 -187.542 345.251C-207.609 322.279 -212.512 285.553 -221.568 236.465C-230.325 187.721 -243.251 126.944 -220.124 78.0526C-196.998 29.1616 -137.489 -8.15667 -88.1183 2.38218C-38.7474 12.921 0.4857 71.317 45.0655 123.388Z" fill="white"/>
@@ -103,7 +108,7 @@
         </div>
     </section>
 
-    <section class="counters">
+    <section class="counters overflow-hidden bg-white">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 p-0">
@@ -183,10 +188,122 @@
         </div>
     </section>
 
-    <section class="history text-white parallax-window" data-parallax="scroll" data-image-src="assets/images/history-bg.svg"></div>
+    <section class="history overflow-hidden text-white"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <h2><span>Company</span> History</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container history-container position-relative">
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div  class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>Ideogen A.G. Incorporated</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>Trpharm Affiliate launched as JV with 30MN Euro Investment to become an R&D center and biotech manufacturing hub of monoclonal antibodies targeting MENA(T) region.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>Konsina Pharmaceuticals JV established in collaboration with Emcure Group with 10mn Euro Investment to commercialize specialty injectables pipeline across thr region. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>Ideogen Invest into Novimmune and CEO Tuygan Goker becomes board member. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>Ideogen Management spearheads Phase 1 clinical trial for Mediterranean Fever and Behcets Disease. Poster Announced in Sandiegoxxxxxxxx. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>TRPHARM breaks ground on biologics fascility construction in Istanbul under highest strategic incentive offered by government. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>Ideogen invests into Anergis allergy R&D </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>Ideogen affiliate TRPHARM launches MENA regional management center in Dubai </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row history-row">
+                <div class="col-6 history-box">
+                    <div class="history-date">
+                        <p class="month">March</p>
+                        <p class="year">2013</p>
+                    </div>
+                    <div class="history-text">
+                        <p>Konsina signs deal with APOTEX for regional marketing and distribution of broad range of speciality products. </p>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="title-left">Company History</h4>
+            <h4 class="title-right">Company History</h4>
+        </div>
         
-        
-        <svg width="100%" height="100%" viewBox="0 0 1920 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+
+        <svg class="wave" width="100%" height="100%" viewBox="0 0 1920 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
             <g transform="matrix(1,0,0,1,0.00720126,-0.00112024)">
                 <g transform="matrix(1,0,0,1,-3511,-1347.35)">
                     <g transform="matrix(1.00073,0,0,1,642.704,153.039)">
@@ -200,12 +317,13 @@
 
     </section>
 
-    <section class="team bg-white">TEAM</section>
-    <section class="philosophy">PHILOSOPHY</section>
-    <section class="help">HOW CAN WE HELP</section>
-    <section class="social-obligation">SOCIAL OBLIGATION</section>
-    <section class="contact-us">CONTACT US</section>
+    <section class="team overflow-hidden bg-white">TEAM</section>
+    <section class="philosophy overflow-hidden">PHILOSOPHY</section>
+    <section class="help overflow-hidden">HOW CAN WE HELP</section>
+    <section class="social-obligation overflow-hidden">SOCIAL OBLIGATION</section>
+    <section class="contact-us overflow-hidden">CONTACT US</section>
     <footer>FOOTER</footer>
+
 </body>
 </html>
 

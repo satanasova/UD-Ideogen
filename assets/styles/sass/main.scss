@@ -1,6 +1,5 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@300;800&display=swap');
-
 @import '../sass/variables';
 @import '../sass/header';
 
@@ -47,7 +46,7 @@ h2 {
     font-weight: 800;
     padding: 100px 0 100px 0;
     span {
-        padding: 5px 2px 5px 200px;
+        padding: 5px 5px 5px 200px;
         color: white;
         background-color: $color_primary-dark;
     }
@@ -57,6 +56,7 @@ h2 {
 header {
     font-family: $font_secondary;
     font-size: $font-small;
+    z-index: 1;
     nav {
         ul.nav {
             li:not(:last-child){
@@ -74,13 +74,8 @@ header {
 //hero
 .hero {
     font-family: $font_secondary;
-    height: 1000px;
-    z-index: -1;
-    background-image: url('../../images/hero.png');
-    background: linear-gradient(to bottom, white 7%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 55%, white 100%), url('../../images/hero.png');
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, white 7%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 55%, white 100%), url('../../images/hero.png') no-repeat center;
     background-size: cover;
-    background-position: center;
 
     &-top {
         padding-top: 200px;
@@ -150,6 +145,8 @@ header {
     }
 }
 
+
+
 //counters
 .counters {
     padding-bottom: 100px;
@@ -160,22 +157,24 @@ header {
     }
     .counter-box {
         text-align: center;
-        background-repeat: no-repeat;
-        background-position: center;
+
         svg {
             transition: all 1s ease-out;
             animation: smallMove 10s linear infinite;
         }
 
         &:first-child() {
-            background-image:  url(../../images/counter-lab.png);
+            background:  url(../../images/counter-lab.png) no-repeat center;
         }
+
         &:nth-child(2) {
-            background-image: url(../../images/counter-pills.png);
+            background: url(../../images/counter-pills.png) no-repeat center;
         }
+
         &:last-child() {
-            background-image: url(../../images/counter-drs.png);
+            background: url(../../images/counter-drs.png) no-repeat center;
         }
+
         &-text {
             position: absolute;
             top: 50%;
@@ -206,9 +205,109 @@ header {
     }
 }
 //history
-.parallax-window {
-    background: transparent;
+
+.history {
+    &::before {
+        content: "";
+        position: fixed;
+        background: url(../../images/history-bg.svg) no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    &-container {
+        padding-bottom: 150px;
+
+        .history-row {
+            margin-top: -20px;
+            opacity: 0;
+            transform: translateY(50%);
+            transition: all .6s ease-in-out;
+    
+            &.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            &:nth-child(odd) {
+                justify-content: end;
+                .history-date {
+                    left: -7%;
+                    transform: rotateY(-90deg);
+                }
+            }
+    
+            &:nth-child(even) {
+                .history-box {
+                    flex-direction: row-reverse;
+                    .history-date {
+                        right: -7%;
+                        transform: rotateY(90deg);
+                    }
+                }
+            }
+    
+            .history-box {
+                display: flex;
+                align-items: center;
+                p {
+                    margin: 0;
+                }
+                .history-date {
+                    position: relative;
+                    width: 123px;
+                    height: 123px;
+                    flex-shrink: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: url(../../images/hexagon.png) no-repeat center;
+                    transition: all .6s ease-in-out;
+
+                    &.show {
+                        transform: rotateY(0deg) !important;
+                    }
+                    
+                    .month {
+                        font-family: $font_secondary;
+                        font-weight: 700;
+                    }
+                    .year {
+                        font-size: 32px;
+                        font-family: $font_primary;
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+    
+        [class^='title'] {
+            position: absolute;
+            font-family: $font_primary;
+            font-weight: 400;
+            font-size: 56px;
+            color: #E5E5E5;
+            text-transform: uppercase;
+            opacity: 0.5;
+            transform: rotateZ(-90deg);
+        }
+    
+        .title-left {
+            top: 25%;
+            left: -25% ;
+        }
+        .title-right {
+            bottom: 20%;
+            right: -25% ;
+        }
+    
+    }
 }
 
-//team
+
 

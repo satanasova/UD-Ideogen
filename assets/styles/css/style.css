@@ -7846,13 +7846,14 @@ h2, .h2 {
   font-weight: 800;
   padding: 100px 0 100px 0; }
   h2 span, .h2 span {
-    padding: 5px 2px 5px 200px;
+    padding: 5px 5px 5px 200px;
     color: white;
     background-color: #D74146; }
 
 header {
   font-family: "Lato", sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  z-index: 1; }
   header nav ul.nav li:not(:last-child)::after {
     content: '|'; }
   header .btn {
@@ -7860,13 +7861,8 @@ header {
 
 .hero {
   font-family: "Lato", sans-serif;
-  height: 1000px;
-  z-index: -1;
-  background-image: url("../../images/hero.png");
-  background: linear-gradient(to bottom, white 7%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 55%, white 100%), url("../../images/hero.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  background: linear-gradient(to bottom, white 7%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 55%, white 100%), url("../../images/hero.png") no-repeat center;
+  background-size: cover; }
   .hero-top {
     padding-top: 200px; }
   .hero-bottom {
@@ -7917,18 +7913,16 @@ header {
   .counters h2 span, .counters .h2 span {
     background: linear-gradient(135deg, #EF4823 -90.64%, #EF4823 -54.25%, #EA4728 -35.72%, #E14437 -4.72%, #D23F4D 34.98%, #BD3965 81.76%, #A32F7F 133.99%, #942C8E 160.53%, #942C8E 218.76%); }
   .counters .counter-box {
-    text-align: center;
-    background-repeat: no-repeat;
-    background-position: center; }
+    text-align: center; }
     .counters .counter-box svg {
       transition: all 1s ease-out;
       animation: smallMove 10s linear infinite; }
     .counters .counter-box:first-child {
-      background-image: url(../../images/counter-lab.png); }
+      background: url(../../images/counter-lab.png) no-repeat center; }
     .counters .counter-box:nth-child(2) {
-      background-image: url(../../images/counter-pills.png); }
+      background: url(../../images/counter-pills.png) no-repeat center; }
     .counters .counter-box:last-child {
-      background-image: url(../../images/counter-drs.png); }
+      background: url(../../images/counter-drs.png) no-repeat center; }
     .counters .counter-box-text {
       position: absolute;
       top: 50%;
@@ -7953,5 +7947,74 @@ header {
         line-height: 24px;
         margin: 0; }
 
-.parallax-window {
-  background: transparent; }
+.history::before {
+  content: "";
+  position: fixed;
+  background: url(../../images/history-bg.svg) no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+
+.history-container {
+  padding-bottom: 150px; }
+  .history-container .history-row {
+    margin-top: -20px;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all .6s ease-in-out; }
+    .history-container .history-row.show {
+      opacity: 1;
+      transform: translateY(0); }
+    .history-container .history-row:nth-child(odd) {
+      justify-content: end; }
+      .history-container .history-row:nth-child(odd) .history-date {
+        left: -7%;
+        transform: rotateY(-90deg); }
+    .history-container .history-row:nth-child(even) .history-box {
+      flex-direction: row-reverse; }
+      .history-container .history-row:nth-child(even) .history-box .history-date {
+        right: -7%;
+        transform: rotateY(90deg); }
+    .history-container .history-row .history-box {
+      display: flex;
+      align-items: center; }
+      .history-container .history-row .history-box p {
+        margin: 0; }
+      .history-container .history-row .history-box .history-date {
+        position: relative;
+        width: 123px;
+        height: 123px;
+        flex-shrink: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(../../images/hexagon.png) no-repeat center;
+        transition: all .6s ease-in-out; }
+        .history-container .history-row .history-box .history-date.show {
+          transform: rotateY(0deg) !important; }
+        .history-container .history-row .history-box .history-date .month {
+          font-family: "Lato", sans-serif;
+          font-weight: 700; }
+        .history-container .history-row .history-box .history-date .year {
+          font-size: 32px;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 800; }
+  .history-container [class^='title'] {
+    position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    color: #E5E5E5;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transform: rotateZ(-90deg); }
+  .history-container .title-left {
+    top: 25%;
+    left: -25%; }
+  .history-container .title-right {
+    bottom: 20%;
+    right: -25%; }
