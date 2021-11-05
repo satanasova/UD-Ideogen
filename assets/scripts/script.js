@@ -17,3 +17,19 @@ $('.history-row').each(function(){
     $(this).removeClass('currentElement','show');
     $(this).find('.history-date').removeClass('currentElement','show');
 })
+
+function playVideo() {
+    $('.video').on('click', function() {
+        const video =  $('.video-mp4').get(0);
+
+        if (video.paused) {
+            video.play();
+            $('.play-btn').hide();
+        } else {
+            video.pause();
+            $('.play-btn').show();
+        }
+    });
+ }
+
+ playVideo();
