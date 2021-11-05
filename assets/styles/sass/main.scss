@@ -112,7 +112,7 @@ header {
 }
 
 //animations
-@keyframes smallMove {
+@keyframes counterMove {
     0% {
         transform: translate(0px, 0px);
     }
@@ -121,6 +121,36 @@ header {
     }
     70% {
         transform: translate(-20px, -5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes lgCardMove {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        transform: translate(-45%, -52%);
+    }
+    75% {
+        transform: translate(-55%, -48%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes mdCardMove {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(5px, 5px);
+    }
+    70% {
+        transform: translate(-5px, -5px);
     }
     100% {
         transform: translate(0px, 0px);
@@ -160,7 +190,7 @@ header {
 
         svg {
             transition: all 1s ease-out;
-            animation: smallMove 10s linear infinite;
+            animation: counterMove 10s linear infinite;
         }
 
         &:first-child() {
@@ -310,4 +340,147 @@ header {
 }
 
 
+//team
+.team {
+    background-color: $color_body;
+    .team-row {
+        position: relative;
+        z-index: 0;
+        &::before,
+        &::after {
+             content: '';
+             background: url(../../images/dots.png) no-repeat center;
+             position: absolute;
+             width: 359px;
+             height: 250px;
+             z-index: -1;
+        }
 
+        &:first-of-type {
+            &::before {
+                top: 50%;
+                left: -6%;
+                transform: translateY(-50%) rotateY(180deg);
+            }
+            &::after {
+                top: 50%;
+                right: -6%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &:nth-of-type(2) {
+            &::before {
+                top: 0%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &::after {
+                display: none;
+            }
+        }
+
+        
+        &:nth-of-type(3) {
+            &::before {
+                top: 0%;
+                left: 20%;
+            }
+            &::after {
+                top: 0%;
+                right: 20%;
+            }
+        }
+
+    }
+    .card {
+        border: none;
+        margin-bottom: 50px;
+        border-radius: 30px;
+        padding: 23px 30px;
+        .row {
+            align-items: center;
+        }
+
+        &-image {
+            text-align: center;
+        }
+
+        &-body {
+            font-family: $font_secondary;
+            font-weight: 300;
+            h5 {
+                font-family: $font_primary;
+                font-size: 32px;
+                margin-bottom: 30px;
+                font-weight: 800;
+                
+                text-transform: uppercase;
+            }
+            .small-text {
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .lg-card {
+        border-radius: 50px;
+        transform: skew(-10deg);
+        .row {
+            transform: skew(10deg);
+            .card-image {
+                position: relative;
+                .blob {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all 1s ease-in-out;
+                    
+                    &:first-of-type{
+                        animation: lgCardMove 20s linear infinite;
+                    }
+
+                    &:nth-of-type(2){
+                        animation: lgCardMove 20s linear infinite alternate-reverse;
+                    }
+                }
+                img:not(.blobs) {
+                    transform: scale(1.3);
+                }
+            }
+            .card-body {
+                padding-left: 53px;
+                padding-right: 53px;
+            }
+        }
+    }
+
+    .md-card {
+        position: relative; 
+        .blob {
+            position: absolute;
+            bottom: -5px;
+            right: -5px;
+            &:first-of-type {
+                animation: mdCardMove 15s linear infinite;
+            }
+            &:nth-of-type(2) {
+                animation: mdCardMove 15s linear infinite alternate-reverse;
+            }
+        }
+    }
+
+    .sm-card {
+        position: relative;
+        padding-top: 120px;
+        text-align: center;
+        margin-top: 75px;
+        .card-image {
+            position: absolute;
+            top: -40%;
+            transform: translateY(50%);
+        }
+    }
+}
