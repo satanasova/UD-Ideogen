@@ -7850,6 +7850,11 @@ h3, .h3 {
     font-style: italic;
     font-weight: 400; }
 
+h4, .h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 800; }
+
 @keyframes counterMove {
   0% {
     transform: translate(0px, 0px); }
@@ -8189,7 +8194,7 @@ header {
         animation: videoMove-right 15s linear infinite alternate-reverse; }
 
 .help {
-  padding-bottom: 220px;
+  padding-bottom: 130px;
   background: url(../../images/help-bg.png) no-repeat center, linear-gradient(to bottom, #F5F5F5 50%, white 50%);
   background-size: cover;
   position: relative; }
@@ -8218,9 +8223,6 @@ header {
       .help-row .dna-content .content-block {
         font-family: "Lato", sans-serif; }
         .help-row .dna-content .content-block h4, .help-row .dna-content .content-block .h4 {
-          font-family: "Montserrat", sans-serif;
-          font-size: 40px;
-          font-weight: 800;
           margin-bottom: 30px; }
         .help-row .dna-content .content-block p {
           font-weight: 300; }
@@ -8250,7 +8252,7 @@ header {
 .social-obligation {
   position: relative;
   padding-bottom: 50px; }
-  .social-obligation::after {
+  .social-obligation::before {
     position: absolute;
     content: '';
     background: url(../../images/dots.png) no-repeat center;
@@ -8289,3 +8291,49 @@ header {
     .social-obligation .blobs svg:last-child {
       transition: all 1s ease-out;
       animation: flying 20s linear infinite; }
+
+.contact-us {
+  background-color: #F5F5F5;
+  position: relative; }
+  .contact-us::before {
+    position: absolute;
+    content: '';
+    background: url(../../images/dots.png) no-repeat center;
+    width: 403px;
+    height: 217px;
+    top: 32.5%;
+    right: 3%;
+    transform: scale(0.9); }
+  .contact-us .contact-row {
+    align-items: center; }
+    .contact-us .contact-row .carousel-box {
+      position: relative; }
+      .contact-us .contact-row .carousel-box .carousel-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+      .contact-us .contact-row .carousel-box .carousel-inner {
+        width: 70%;
+        margin: 0 auto; }
+      .contact-us .contact-row .carousel-box .carousel-item {
+        font-family: "Lato", sans-serif;
+        padding: 0 25px 30px 60px; }
+        .contact-us .contact-row .carousel-box .carousel-item > p {
+          font-weight: 300;
+          line-height: 20px; }
+        .contact-us .contact-row .carousel-box .carousel-item .adress,
+        .contact-us .contact-row .carousel-box .carousel-item .phone {
+          display: flex;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 20px; }
+          .contact-us .contact-row .carousel-box .carousel-item .adress p,
+          .contact-us .contact-row .carousel-box .carousel-item .phone p {
+            padding-left: 10px; }
+      .contact-us .contact-row .carousel-box .carousel-control {
+        top: -10%; }
+        .contact-us .contact-row .carousel-box .carousel-control-prev {
+          left: 5%; }
+        .contact-us .contact-row .carousel-box .carousel-control-next {
+          right: 5%; }
