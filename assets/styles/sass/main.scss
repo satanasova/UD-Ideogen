@@ -170,7 +170,7 @@ header {
     font-family: $font_secondary;
     background: linear-gradient(to bottom, white 7%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 55%, white 100%), url('../../images/hero.png') no-repeat center;
     background-size: cover;
-
+    position: relative;
     &-top {
         padding-top: 200px;
     }
@@ -649,4 +649,68 @@ header {
             right: -20px;
         }
     }
+}
+
+//social obligation
+.social-obligation {
+    position: relative;
+    padding-bottom: 50px;
+    &::after {
+        position: absolute;
+        content: '';
+        background: url(../../images/dots.png) no-repeat center;
+        width: 285px;
+        height: 217px;
+        top: 15%;
+        right: -8%;
+        transform: rotateZ(90deg) scale(0.8);
+    }
+
+    h2 {
+        padding-bottom: 50px;
+    }
+
+    .social-row {
+        align-items: center;
+        .social-text {
+            font-family: $font_secondary;
+            font-weight: 300;
+            padding: 0px 95px;
+            align-items: center;
+            span {
+                color: #942C8E;
+                font-weight: 700;
+            }
+        }
+
+        .social-images {
+            .row {
+                justify-content: center;
+                align-items: center;
+                img {
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .blobs {
+        position: absolute;
+        bottom: 40%;
+        right: -20px;
+        svg:first-child() {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite ;
+        }
+        svg:nth-child(2) {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite alternate-reverse;
+        }
+        svg:last-child() {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite;
+        }
+
+    }
+
 }

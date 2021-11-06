@@ -7924,7 +7924,8 @@ header {
 .hero {
   font-family: "Lato", sans-serif;
   background: linear-gradient(to bottom, white 7%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.5) 55%, white 100%), url("../../images/hero.png") no-repeat center;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
   .hero-top {
     padding-top: 200px; }
   .hero-bottom {
@@ -8245,3 +8246,46 @@ header {
     .help .blobs-end {
       top: 5%;
       right: -20px; }
+
+.social-obligation {
+  position: relative;
+  padding-bottom: 50px; }
+  .social-obligation::after {
+    position: absolute;
+    content: '';
+    background: url(../../images/dots.png) no-repeat center;
+    width: 285px;
+    height: 217px;
+    top: 15%;
+    right: -8%;
+    transform: rotateZ(90deg) scale(0.8); }
+  .social-obligation h2, .social-obligation .h2 {
+    padding-bottom: 50px; }
+  .social-obligation .social-row {
+    align-items: center; }
+    .social-obligation .social-row .social-text {
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      padding: 0px 95px;
+      align-items: center; }
+      .social-obligation .social-row .social-text span {
+        color: #942C8E;
+        font-weight: 700; }
+    .social-obligation .social-row .social-images .row {
+      justify-content: center;
+      align-items: center; }
+      .social-obligation .social-row .social-images .row img {
+        padding-bottom: 50px; }
+  .social-obligation .blobs {
+    position: absolute;
+    bottom: 40%;
+    right: -20px; }
+    .social-obligation .blobs svg:first-child {
+      transition: all 1s ease-out;
+      animation: flying 20s linear infinite; }
+    .social-obligation .blobs svg:nth-child(2) {
+      transition: all 1s ease-out;
+      animation: flying 20s linear infinite alternate-reverse; }
+    .social-obligation .blobs svg:last-child {
+      transition: all 1s ease-out;
+      animation: flying 20s linear infinite; }
