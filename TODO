@@ -1,6 +1,8 @@
 TODO:
 - Responsive and fix little bugs
-  -- header section
+  -- header section - wrap btns and flags in one div with d-flex;
+                    - show header on md?
+                    - slice header under md 
   -- hero section
   -- counter section
   -- history section

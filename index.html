@@ -16,39 +16,77 @@
     <title>Siyana Atanasova - Landing Page 101</title>
 </head>
 <body>
-    <header class="py-3 position-absolute start-0 end-0">
+    <header class="header overflow-hidden py-3 ">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-4">
+                <div class="header-logo col-6 col-sm-12 col-xl-4 d-flex align-items-center justify-content-center">
                     <a href="#">
                         <img class="img-fluid" src="assets/images/Ideogen_Logo.png" alt="">
                     </a>
                 </div>
-                <div class="col-4">
-                    <nav>
-                        <ul class="nav fw-bold">
-                            <li class="d-flex align-items-center">
-                                <a class="nav-link text-black text-uppercase px-2" href="#">The mission</a>
+                <div class="header-main-menu col-sm-12 col-xl-4 d-none d-md-flex align-items-center justify-content-center">
+                    <nav  class="main-nav">
+                        <ul>
+                            <li>
+                                <a class="nav-link" href="#">The mission</a>
                             </li>
-                            <li class="d-flex align-items-center">
-                                <a class="nav-link text-black text-uppercase px-2" href="#">Who we are</a>
+                            <li>
+                                <a class="nav-link" href="#">Who we are</a>
                             </li>
-                            <li class="d-flex align-items-center">
-                                <a class="nav-link text-black text-uppercase px-2" href="#">Partnering</a>
+                            <li>
+                                <a class="nav-link" href="#">Partnering</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
-                <div class="col-4">
+                <div class="header-btns col-sm-12 col-xl-4 d-none d-md-flex align-items-center justify-content-center">
                     <button class="btn btn-outline-dark rounded-pill py-0 text-uppercase fw-bold">Product</button>
                     <button class="btn btn-outline-dark rounded-pill py-0 px-4 text-uppercase fw-bold">R&D</button>
-                    <ul class="lang d-inline-block m-0">
+                    <div class="lang ps-3 mb-1">
                         <a href="#"><img src="assets/images/flags/uk.png" alt=""></a>
                         <a href="#"><img src="assets/images/flags/swiss.png" alt=""></a>
                         <a href="#"><img src="assets/images/flags/fr.png" alt=""></a>
                         <a href="#"><img src="assets/images/flags/es.png" alt=""></a>
                         <a href="#"><img src="assets/images/flags/it.png" alt=""></a>
-                    </ul>
+                    </div>
+                </div>
+                <div class="header-mobile-menu col d-md-none">
+                    <a class="btn-inline d-flex justify-content-end" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <img src="assets/images/mobile-bars.svg" alt="" class="img-fluid">
+                    </a>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
+                        <div class="offcanvas-header align-self-end">
+                            <a href="" class="btn-close-custom" data-bs-dismiss="offcanvas" aria-label="Close">
+                                <img src="assets/images/mobile-close.svg" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="offcanvas-body">
+                            <nav class="mobile-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">The mission</a>
+                                    </li>
+                                    <li >
+                                        <a href="#">Who we are</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Partnering</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="social-media">
+                                <a href=""><img src="assets/images/logo-linkedin.png" alt="" class="img-fluid"></a>
+                                <span>Follow us</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -701,7 +739,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="footer overflow-hidden">
         <div class="footer-top bg-black">
             <div class="container">
                 <div class="row footer-top-row">
