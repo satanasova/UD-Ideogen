@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timeline.css/1.0/timeline.css" integrity="sha512-peBlbZvA0pwrClPrADUcxsevEPKaoAoJ6YN3MvBLKBwoTBygRXPSesFjUiI5YhQDjIzsw9Jg/eZ0rX1IllVJCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="assets/styles/css/style.css">
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" defer></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" defer></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" defer></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" defer></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js" defer></script>
 
     <script type="module" src="assets/scripts/script.js"></script>
@@ -17,14 +17,14 @@
 </head>
 <body>
     <header class="header overflow-hidden py-3 ">
-        <div class="container">
+        <div class="container-xl ">
             <div class="row align-items-center">
                 <div class="header-logo col-6 col-sm-12 col-xl-4 d-flex align-items-center justify-content-center">
                     <a href="#">
                         <img class="img-fluid" src="assets/images/Ideogen_Logo.png" alt="">
                     </a>
                 </div>
-                <div class="header-main-menu col-sm-12 col-xl-4 d-none d-md-flex align-items-center justify-content-center">
+                <div class="header-main-menu col-sm-6 col-xl-4 d-none d-md-flex align-items-center justify-content-center">
                     <nav  class="main-nav">
                         <ul>
                             <li>
@@ -39,7 +39,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="header-btns col-sm-12 col-xl-4 d-none d-md-flex align-items-center justify-content-center">
+                <div class="header-btns col-sm-6 col-xl-4 d-none d-md-flex align-items-center justify-content-center">
                     <button class="btn btn-outline-dark rounded-pill py-0 text-uppercase fw-bold">Product</button>
                     <button class="btn btn-outline-dark rounded-pill py-0 px-4 text-uppercase fw-bold">R&D</button>
                     <div class="lang ps-3 mb-1">
@@ -85,7 +85,6 @@
                                 <span>Follow us</span>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -115,12 +114,12 @@
                 <div class="col-12 text-center">
                     <h3 class="fs-1">Pharma at the <span>speed</span> of <span>life</span></h3>
                 </div>
-                <div class="col-4 fw-bold fs-5 text-end">
+                <div class="col-md-4 fw-bold fs-5 text-md-end">
                     <p>
                         Ideogen Group is a family owned and corporate run Swiss pharmaceutical group, providing global access to specialty medicines for unmet medical needs. 
                     </p>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <p>
                         We specialize in the commercialization of specialty medicines across multiple geographies with challenging and evolving healthcare dynamics. With the resources to handle activities ranging from early access and name patient programs through licensed medicines life cycle management; we focus on contributing to unmet needs by offering healthcare providers access to unique treatment alternatives for medical challenges patients face today.
                     </p>
@@ -148,15 +147,16 @@
     </section>
 
     <section class="counters overflow-hidden bg-white">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12 p-0">
                     <h2><span>Capabilities</span> & Focus</h2>
                 </div>
             </div>
-
+        </div>
+        <div class="container-xxl">
             <div class="row">
-                <div class="col-4 counter-box position-relative">
+                <div class="col-md-6 col-xl-4 counter-box position-relative">
                     <svg width="353" height="311" viewBox="0 0 353 311" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path opacity="0.67" d="M132.455 279.169C74.6283 261.549 15.4557 251.084 3.33843 219.477C-9.0204 188.009 25.1931 135.677 51.4469 98.0149C77.4593 60.4927 95.5121 37.6409 119.468 21.1143C143.812 4.69991 173.962 -4.99785 199.636 2.66262C225.551 10.1836 246.748 35.2023 276.943 67.4443C306.752 99.574 345.412 138.675 351.553 186.157C357.694 233.64 331.218 289.895 289.426 305.647C247.633 321.4 190.524 296.65 132.455 279.169Z" fill="#EA4728"/>
                     </svg>
@@ -178,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 counter-box position-relative">
+                <div class="col-md-6 col-xl-4 counter-box position-relative">
                     <svg width="356" height="302" viewBox="0 0 356 302" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path opacity="0.67" d="M131.719 274.404C73.9344 258.665 14.6113 249.955 3.21839 219.371C-8.42131 188.93 27.3756 136.899 54.7806 99.4126C81.9387 62.0685 100.705 39.2685 125.254 22.4995C150.191 5.83037 180.803 -4.42268 206.462 2.40615C232.368 9.09238 253.074 33.0031 282.656 63.7433C311.852 94.3837 349.784 131.611 354.751 177.866C359.718 224.12 331.613 279.786 289.121 296.256C246.629 312.727 189.75 290.001 131.719 274.404Z" fill="#942C8E"/>
                     </svg>
@@ -201,7 +201,7 @@
                     </div>
 
                 </div>
-                <div class="col-4 counter-box position-relative">
+                <div class="col-md-12 col-xl-4 counter-box position-relative">
                     <svg width="353" height="311" viewBox="0 0 353 311" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path opacity="0.67" d="M132.455 279.169C74.6284 261.549 15.4558 251.084 3.33846 219.477C-9.02034 188.009 25.1931 135.677 51.447 98.0148C77.4593 60.4926 95.5121 37.6408 119.468 21.1142C143.812 4.69987 173.962 -4.99787 199.636 2.6626C225.551 10.1835 246.748 35.2023 276.943 67.4442C306.752 99.574 345.413 138.675 351.553 186.157C357.694 233.64 331.218 289.895 289.426 305.647C247.633 321.4 190.524 296.65 132.455 279.169Z" fill="#1846BF"/>
                     </svg>
@@ -228,7 +228,7 @@
     </section>
 
     <section class="history overflow-hidden text-white"></div>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12 p-0">
                     <h2><span>Company</span> History</h2>
@@ -238,7 +238,7 @@
 
         <div class="container history-container position-relative">
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div  class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -249,7 +249,7 @@
                 </div>
             </div>
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -260,7 +260,7 @@
                 </div>
             </div>
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -271,7 +271,7 @@
                 </div>
             </div>
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -282,7 +282,7 @@
                 </div>
             </div>
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -293,7 +293,7 @@
                 </div>
             </div>
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -304,7 +304,7 @@
                 </div>
             </div>
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -315,7 +315,7 @@
                 </div>
             </div>
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -326,7 +326,7 @@
                 </div>
             </div>
             <div class="row history-row">
-                <div class="col-6 history-box">
+                <div class="col-12 col-md-10 col-lg-6 history-box">
                     <div class="history-date">
                         <p class="month">March</p>
                         <p class="year">2013</p>
@@ -337,11 +337,11 @@
                 </div>
             </div>
 
-            <h4 class="title-left">Company History</h4>
-            <h4 class="title-right">Company History</h4>
+            <h4 class="title-left d-none d-md-block">Company History</h4>
+            <h4 class="title-right d-none d-md-block">Company History</h4>
         </div>
         
-        <svg class="wave" width="100%" height="100%" viewBox="0 0 1920 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+        <svg class="wave" width="100%" height="100%" viewBox="0 0 1920 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
             <g transform="matrix(1,0,0,1,0.00720126,-0.00112024)">
                 <g transform="matrix(1,0,0,1,-3511,-1347.35)">
                     <g transform="matrix(1.00073,0,0,1,642.704,153.039)">
@@ -355,7 +355,7 @@
     </section>
 
     <section class="team overflow-hidden">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12 p-0">
                     <h2><span>About</span>Ideogen</h2>
@@ -363,18 +363,18 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="row team-row justify-content-center">
-                <div class="col-8">
+        <div class="container ">
+            <div class="row team-row">
+                <div class="col-md-10 col-xl-8">
                     <div class="card lg-card">
-                        <div class="row">
-                            <div class="col-5 card-image">
+                        <div class="row align-items-center">
+                            <div class="col-xl-5 card-image">
                                 <img src="assets/images/team-orange-blob.png" alt="" class="blob">
                                 <img src="assets/images/team-purple-blob.png" alt="" class="blob">
                                 <img src="assets/images/person.png" class="img-fluid rounded-start" alt="...">
                             </div>
     
-                            <div class="col-7 card-body">
+                            <div class="col-xl-7 card-body px-0 px-md-5 text-center text-xl-start">
                                 <p class="small-text">Group CEO & Chairman</p>
                                 <h5 class="card-title name">H. Tuygan Goeker</h5>
                                 <p class="card-text description">At IDEOGEN AG, we apply our strategic global thinkers to nurture investments and provide advisory services, that deliver solutions, unlock value and proper growth.</p>
@@ -389,7 +389,7 @@
             </div>
 
             <div class="row team-row">
-                <div class="col-6 pe-4">
+                <div class="col-lg-6 pe-xl-4">
                     <div class="card md-card overflow-hidden">
                         <svg class="blob" width="143" height="78" viewBox="0 0 143 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M54.9573 47.3727C80.4646 24.4244 101.338 -0.593594 125.971 0.263469C150.563 0.981417 178.834 27.2962 198.803 46.9825C218.732 66.5297 230.359 79.4484 236.255 93.7912C241.984 108.289 241.733 124.087 230.521 134.308C219.349 144.669 197.175 149.314 167.936 156.62C138.864 163.772 102.933 173.569 68.7093 166.749C34.4855 159.928 1.72037 136.366 0.471659 113.999C-0.777055 91.6324 29.4907 70.4601 54.9573 47.3727Z" fill="#EF4823"/>
@@ -398,12 +398,12 @@
                             <path d="M99.6937 20.5495C138.287 8.99265 174.025 -6.57295 195.962 4.80301C217.955 16.0253 226.258 53.882 231.392 81.698C236.581 109.36 238.6 126.982 234.433 143.547C230.011 160.191 219.259 175.551 202.205 180.762C185.095 186.127 161.74 181.19 130.156 175.836C98.8273 170.402 59.4698 164.625 32.7413 143.308C6.01276 121.991 -8.23131 84.9073 5.52672 62.4745C19.2848 40.0417 61.0449 32.26 99.6937 20.5495Z" fill="#A42F7E" fill-opacity="0.64"/>
                         </svg>
                             
-                        <div class="row">
-                            <div class="col-5 card-image">
+                        <div class="row align-items-start align-items-xl-center">
+                            <div class="col-sm-5 card-image">
                                 <img src="assets/images/person.png" class="img-fluid rounded-start" alt="...">
                             </div>
     
-                            <div class="col-7 card-body">
+                            <div class="col-sm-7 card-body ps-0 ps-md-4 pt-0 pt-xl-4">
                                 <p class="small-text">Group CFO</p>
                                 <h5 class="card-title name">MEHMET Cem Goker</h5>
                                 <p class="card-text description">At IDEOGEN AG, we apply our strategic global thinkers to nurture investments and provide advisory services, that deliver solutions, unlock value and proper growth.</p>
@@ -414,7 +414,7 @@
                         </div>    
                     </div>
                 </div>
-                <div class="col-6 ps-4">
+                <div class="col-lg-6 ps-xl-4">
                     <div class="card md-card overflow-hidden">
                         <svg class="blob" width="143" height="78" viewBox="0 0 143 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M54.9573 47.3727C80.4646 24.4244 101.338 -0.593594 125.971 0.263469C150.563 0.981417 178.834 27.2962 198.803 46.9825C218.732 66.5297 230.359 79.4484 236.255 93.7912C241.984 108.289 241.733 124.087 230.521 134.308C219.349 144.669 197.175 149.314 167.936 156.62C138.864 163.772 102.933 173.569 68.7093 166.749C34.4855 159.928 1.72037 136.366 0.471659 113.999C-0.777055 91.6324 29.4907 70.4601 54.9573 47.3727Z" fill="#EF4823"/>
@@ -423,12 +423,12 @@
                             <path d="M99.6937 20.5495C138.287 8.99265 174.025 -6.57295 195.962 4.80301C217.955 16.0253 226.258 53.882 231.392 81.698C236.581 109.36 238.6 126.982 234.433 143.547C230.011 160.191 219.259 175.551 202.205 180.762C185.095 186.127 161.74 181.19 130.156 175.836C98.8273 170.402 59.4698 164.625 32.7413 143.308C6.01276 121.991 -8.23131 84.9073 5.52672 62.4745C19.2848 40.0417 61.0449 32.26 99.6937 20.5495Z" fill="#A42F7E" fill-opacity="0.64"/>
                         </svg>
 
-                        <div class="row">
-                            <div class="col-5 card-image">
+                        <div class="row align-items-start align-items-xl-center">
+                            <div class="col-sm-5 card-image">
                                 <img src="assets/images/person.png" class="img-fluid rounded-start" alt="...">
                             </div>
     
-                            <div class="col-7 card-body">
+                            <div class="col-sm-7 card-body ps-0 ps-md-4 pt-0 pt-xl-4">
                                 <p class="small-text">Group CFO</p>
                                 <h5 class="card-title name">Murat CeM GOKER</h5>
                                 <p class="card-text description">At IDEOGEN AG, we apply our strategic global thinkers to nurture investments and provide advisory services, that deliver solutions, unlock value and proper growth.</p>
@@ -443,14 +443,14 @@
             </div>
 
             <div class="row team-row">
-                <div class="col-4">
+                <div class="col-lg-6 col-xl-4">
                     <div class="card sm-card">
-                        <div class="row flex-column">
+                        <div class="row flex-column align-items-center">
                             <div class="col-12 card-image">
                                 <img src="assets/images/person.png" class="img-fluid rounded-start" alt="...">
                             </div>
     
-                            <div class="col-12 card-body">
+                            <div class="col-12 card-body px-0">
                                 <p class="small-text">CFO</p>
                                 <h5 class="card-title name">Leonardo Canonico</h5>
                                 <p class="card-text description">At IDEOGEN AG, we apply our strategic global thinkers to nurture investments and provide advisory services, that deliver solutions, unlock value and proper growth.</p>
@@ -461,14 +461,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-6 col-xl-4">
                     <div class="card sm-card">
-                        <div class="row flex-column">
+                        <div class="row flex-column align-items-center">
                             <div class="col-12 card-image">
                                 <img src="assets/images/person.png" class="img-fluid rounded-start" alt="...">
                             </div>
     
-                            <div class="col-12 card-body">
+                            <div class="col-12 card-body px-0">
                                 <p class="small-text">Legal Council</p>
                                 <h5 class="card-title name">Andre Brunschweiler</h5>
                                 <p class="card-text description">At IDEOGEN AG, we apply our strategic global thinkers to nurture investments and provide advisory services, that deliver solutions, unlock value and proper growth.</p>
@@ -480,14 +480,14 @@
                     </div>
 
                 </div>
-                <div class="col-4">
+                <div class="col-lg-6 col-xl-4">
                     <div class="card sm-card">
-                        <div class="row flex-column">
+                        <div class="row flex-column align-items-center">
                             <div class="col-12 card-image">
                                 <img src="assets/images/person.png" class="img-fluid rounded-start" alt="...">
                             </div>
     
-                            <div class="col-12 card-body">
+                            <div class="col-12 card-body px-0">
                                 <p class="small-text">Medical Advisor</p>
                                 <h5 class="card-title name">Dr. Andre E Brauchlin</h5>
                                 <p class="card-text description">At IDEOGEN AG, we apply our strategic global thinkers to nurture investments and provide advisory services, that deliver solutions, unlock value and proper growth.</p>
@@ -505,7 +505,7 @@
     </section>
 
     <section class="philosophy overflow-hidden">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12 p-0">
                     <h2><span>Ideo</span>Philosophy</h2>
@@ -536,7 +536,7 @@
         </div>
     </section>
 
-    <section class="help overflow-hidden">
+    <section class="help overflow-hidden" id="dna-trriger">
         <div class="blobs blobs-start">
             <svg class="position-absolute start-0" width="86" height="247" viewBox="0 0 86 247" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.67" d="M-70.0847 239.841C-121.279 244.633 -171.221 255.474 -190.963 234.573C-210.85 213.86 -200.828 161.779 -192.331 123.774C-183.98 85.9554 -177.154 62.2114 -163.64 41.53C-149.785 20.8122 -129.192 3.49497 -106.516 1.23991C-83.6941 -1.20241 -58.9347 11.6047 -24.7622 27.1827C9.06971 42.7972 52.119 61.0319 72.285 96.3136C92.451 131.595 89.7843 184.262 61.9851 210.079C34.1859 235.896 -18.7458 234.862 -70.0847 239.841Z" fill="white"/>
@@ -549,7 +549,7 @@
             </svg> 
         </div>
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12 p-0">
                     <h2><span>How</span>Can we help</h2>
@@ -557,9 +557,9 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="row help-row">
-                <div class="col-4 dna-content">
+        <div class="container p-0">
+            <div class="row help-row px-lg-5 flex-column flex-lg-row">
+                <div class="col-10 col-lg-4 dna-content">
                     <div class="content-block">
                         <h4>Biotech & Pharmacuetical</h4>
                         <p>Ideogen Group companies are proudly accredited in managing the full lifecycle of medicines across continental Europe for medicines in pre and post commercialization stages. </p>
@@ -571,15 +571,15 @@
                         <button class="btn btn-inline p-0">Learn more →</button>
                     </div>
                 </div>
-                <div class="col-4 dna-img">
-                    <img class="img-fluid" src="assets/images//dna/1.png" alt="">
-                </div>
-                <div class="col-4 dna-content">
+                <div class="col-10 col-lg-4 dna-content">
                     <div class="content-block">
                         <h4>Patient <br> Advocacy</h4>
                         <p>Ideogen Group companies are proudly accredited in managing the full lifecycle of medicines across continental Europe for medicines in pre and post commercialization stages. </p>
                         <button class="btn btn-inline p-0">Learn more →</button>
                     </div>
+                </div>
+                <div class="col dna-img">
+                    <img id="dna-img" class="img-fluid" src="assets/images//dna/1.png" alt="">
                 </div>
             </div>
         </div>
@@ -598,7 +598,7 @@
     </section>
 
     <section class="social-obligation overflow-hidden bg-white">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12 p-0">
                     <h2><span>Social</span>Obligation</h2>
@@ -606,9 +606,9 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container ">
             <div class="row social-row">
-                <div class="col-6 social-text">
+                <div class="col-md-6 social-text">
                     <p>
                         Every aspect of our daily routine incorporates one main principle: 
                     </p>
@@ -622,14 +622,14 @@
                         Our commitment to society is that all of our processes have to be green, socially attuned and strive to establish a <span>win-win sustainable</span> and concrete <span>value proposition</span> that is aligned with the needs of a global community.</p>
                     </p>
                 </div>
-                <div class="col-6 social-images">
+                <div class="col-md-6 social-images">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-6 col-xl-4">
                             <img src="assets/images/social/friendsofthesea.png" alt="" class="img-fluid">
                             <img src="assets/images/social/glutenfree.png" alt="" class="img-fluid">
                             <img src="assets/images/social/recycling.png" alt="" class="img-fluid">
                         </div>
-                        <div class="col-4">
+                        <div class="col-6 col-xl-4">
                             <img src="assets/images/social/gras.png" alt="" class="img-fluid">
                             <img src="assets/images/social/vegan.png" alt="" class="img-fluid">
                             <img src="assets/images/social/gmo-free.png" alt="" class="img-fluid">
@@ -654,7 +654,7 @@
     </section>
 
     <section class="contact-us overflow-hidden">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12 p-0">
                     <h2><span>Contact</span>Us</h2>
@@ -662,17 +662,17 @@
             </div>
         </div>
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="row contact-row">
-                <div class="col-6">
+                <div class="col-lg-5 col-xl-6">
                     <img src="assets/images/Earth.png" alt="" class="img-fluid">
                 </div>
 
-                <div class="col-6 p-0 carousel-box">
-                    <img class="carousel-bg img-fluid" src="assets/images/carousel-bg.png" alt="" >
+                <div class="col-lg-7 col-xl-6 carousel-box">
+                    <!-- <img class="carousel-bg img-fluid" src="assets/images/carousel-bg.png" alt="" > -->
                     <div id="carouselExampleControls" class="carousel slide text-white" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
+                        <div class="carousel-inner px-3 px-xl-5">
+                          <div class="carousel-item active px-5 pb-5 pt-0 py-sm-3">
                              <h4>Ideogen Turkey</h4>
                              <p>Short text about country operation lorem lorem lorem lorem imp lorem lorem lomre lorem lomre</p>
                              <div class="adress">
@@ -689,7 +689,7 @@
                              </div>
                           </div>
 
-                          <div class="carousel-item">
+                          <div class="carousel-item px-5 pb-5 pt-0 py-sm-3">
                             <h4>Ideogen Spain</h4>
                             <p>Short text about country operation lorem lorem lorem lorem imp lorem lorem lomre lorem lomre</p>
                             <div class="adress">
@@ -706,7 +706,7 @@
                             </div>
                          </div>
 
-                         <div class="carousel-item">
+                         <div class="carousel-item px-5 pb-5 pt-0 py-sm-3">
                             <h4>Ideogen UK</h4>
                             <p>Short text about country operation lorem lorem lorem lorem imp lorem lorem lomre lorem lomre</p>
                             <div class="adress">
@@ -741,7 +741,7 @@
 
     <footer class="footer overflow-hidden">
         <div class="footer-top bg-black">
-            <div class="container">
+            <div class="container ">
                 <div class="row footer-top-row">
                     <div class="col-4 footer-top-col">
                         <div class="footer-top-heading">
@@ -796,7 +796,7 @@
             </div>
         </div>
         <div class="footer-bottom bg-white">
-            <div class="container">
+            <div class="container ">
                 <div class="row">
                     <div class="col-4 footer-bottom-logo">
                         <a href="#">

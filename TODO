@@ -1,5 +1,14 @@
 TODO:
 - Responsive and fix little bugs
+-- footer section
+
+- help section - functionality
+
+- organize code
+
+
+DONE:
+- Responsive and fix little bugs
   -- header section - wrap btns and flags in one div with d-flex;
                     - show header on md?
                     - slice header under md 
@@ -11,12 +20,3 @@ TODO:
   -- help section
   -- social section
   -- contact section
-  -- footer section
-
-- help section - functionality
-
-- organize code
-
-
-DONE:
-

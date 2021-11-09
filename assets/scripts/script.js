@@ -34,3 +34,39 @@ function playVideo() {
  }
 
  playVideo();
+
+ function rotateDna() {
+    var images = [
+        "../assets/images/dna/1.png",
+        "../assets/images/dna/2.png",
+        "../assets/images/dna/3.png",
+        "../assets/images/dna/4.png",
+        "../assets/images/dna/5.png",
+        "../assets/images/dna/6.png",
+        "../assets/images/dna/7.png",
+        "../assets/images/dna/8.png",
+    ];
+    var obj = { curImg: 0 };
+    
+    // create tween
+    var tween = TweenMax.to(obj, 0.5,
+        {
+            curImg: images.length - 1,	// animate propery curImg to number of images
+            roundProps: "curImg",				// only integers so it can be used as an array index
+            repeat: 5,									// repeat 3 times
+            immediateRender: true,			// load first image automatically
+            ease: Linear.easeNone,			// show every image the same ammount of time
+            onUpdate: function () {
+                $("#dna-img").attr("src", images[obj.curImg]); // set the image source
+            }
+        }
+    );
+    
+    var controller = new ScrollMagic.Controller();
+    
+    var scene = new ScrollMagic.Scene({ triggerElement: "#dna-trriger", duration: 1200 })
+        .setTween(tween)
+        .addTo(controller);
+ }
+
+ rotateDna()
