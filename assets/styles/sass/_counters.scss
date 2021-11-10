@@ -1,0 +1,61 @@
+.counters {
+    padding-bottom: 100px;
+    h2 {
+        span {
+            // background: linear-gradient(135deg, #EF4823 -90.64%, #EF4823 -54.25%, #EA4728 -35.72%, #E14437 -4.72%, #D23F4D 34.98%, #BD3965 81.76%, #A32F7F 133.99%, #942C8E 160.53%, #942C8E 218.76%);
+            background:linear-gradient(135deg, #EF4823 -90.64%, #EF4823 -54.25%, #EA4728 -35.72%, #E14437 -4.72%, #D23F4D 34.98%, #BD3965 81.76%, #A32F7F 133.99%, #942C8E 160.53%, #942C8E 218.76%);
+            &::before {
+                background: #DD423D;
+                // background: linear-gradient(135deg, #EF4823 -90.64%, #EF4823 -54.25%, #EA4728 -35.72%, #E14437 -4.72%, #D23F4D 34.98%, #BD3965 81.76%, #A32F7F 133.99%, #942C8E 160.53%, #942C8E 218.76%);
+            }
+        }
+    }
+    .counter-box {
+        text-align: center;
+
+        svg {
+            transition: all 1s ease-out;
+            animation: counterMove 10s linear infinite;
+        }
+
+        &:first-child() {
+            background:  url(../../images/counter-lab.png) no-repeat center;
+        }
+
+        &:nth-child(2) {
+            background: url(../../images/counter-pills.png) no-repeat center;
+        }
+
+        &:last-child() {
+            background: url(../../images/counter-drs.png) no-repeat center;
+        }
+
+        &-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+            height: 75%;
+            padding-bottom: 20px;
+            color: white;
+            .count-number {
+                font-family: $font_primary;
+                font-weight: 800;
+                font-size: 45px;
+                line-height: 54px;
+                margin: 0;
+            }
+            p:not(.count-number) {
+                font-family: $font_secondary;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 24px;
+                margin: 0;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+.history {
+    &::before {
+        content: "";
+        position: fixed;
+        background: url(../../images/history-bg.svg) no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    &-container {
+        padding-bottom: 150px;
+
+        .history-row {
+            margin-top: -20px;
+            opacity: 0;
+            transform: translateY(50%);
+            transition: all .6s ease-in-out;
+    
+            &.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    
+            &:nth-child(odd) {
+                justify-content: end;
+                .history-date {
+                    left: -7%;
+                    transform: rotateY(-90deg);
+                }
+                .history-text {
+                    padding-right: 20%;
+                }
+            }
+
+                
+            &:nth-child(even) {
+                .history-box {
+                    flex-direction: row-reverse;
+                    .history-date {
+                        right: -7%;
+                        transform: rotateY(90deg);
+                    }
+                    .history-text {
+                        padding-left: 20%;
+                    }
+                }
+            }
+    
+            .history-box {
+                display: flex;
+                align-items: center;
+                p {
+                    margin: 0;
+                }
+                .history-date {
+                    position: relative;
+                    width: 123px;
+                    height: 123px;
+                    flex-shrink: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: url(../../images/hexagon.png) no-repeat center;
+                    transition: all .6s ease-in-out;
+
+                    &.show {
+                        transform: rotateY(0deg) !important;
+                    }
+                    
+                    .month {
+                        font-family: $font_secondary;
+                        font-weight: 700;
+                    }
+                    .year {
+                        font-size: 32px;
+                        font-family: $font_primary;
+                        font-weight: 800;
+                    }
+                }
+            }
+
+            @media (max-width: 576px) {
+                margin-top: 10px;
+                &:nth-child(odd) {
+                    .history-box {
+                        align-items: start;
+                    }
+                    .history-date {
+                        left: 0;
+                    }
+                }
+                    
+                &:nth-child(even) {
+                    .history-box {
+                        align-items: end;
+                        .history-date {
+                            right: 0;
+                        }
+                        .history-text {
+                            text-align: right;
+                        }
+                    }
+                }
+                
+                .history-box {
+                    flex-direction: column !important;
+                    .history-text {
+                        padding: 0;
+                    }
+                }
+            }
+
+        }
+    
+        [class^='title'] {
+            position: absolute;
+            font-family: $font_primary;
+            font-weight: 400;
+            font-size: 56px;
+            color: #E5E5E5;
+            text-transform: uppercase;
+            opacity: 0.5;
+        }
+        
+        .title-left {
+            top: 25%;
+            left: 5%;
+            transform: rotateZ(-90deg) translateY(-285px);
+        }
+        .title-right {
+            bottom: 20%;
+            right: 5%;
+            transform: rotateZ(-90deg) translateY(285px);
+        }
+    
+    }
+}

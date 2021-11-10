@@ -1,0 +1,88 @@
+h1 {
+    font-family: $font_primary;
+    &::before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 5px;
+        background-color: $color_primary-light;
+        margin: 0 auto 15px auto;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 5px;
+        background-color: $color_primary-light;
+        margin: 15px auto 0 auto;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: $font_primary;
+    font-weight: 800;
+    padding: 100px 0 100px 0;
+    span {
+        position: relative;
+        padding: 5px 5px 5px 10%;
+        background: $color_primary-dark;
+        color: white;
+        z-index: 1;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100vw;    
+            z-index: -1;
+            background:inherit;
+        }
+    }
+}
+
+h3 {
+    font-family: $font_secondary;
+    font-weight: 700;
+    margin-bottom: 100px;
+    span {
+        color: $color_primary-light;
+        text-transform: capitalize;
+        font-style: italic;
+        font-weight: 400;
+    }
+    &.h3-small {
+        font-weight: 300;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+}
+
+h4 {
+    font-family: $font_primary;
+    font-size: 40px;
+    font-weight: 800;
+    @media (max-width: 576px) {
+        font-size: 32px;
+    }
+}
+
+h5 {
+    font-family: $font_primary;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-family: $font_primary;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    background-color: $color_primary-dark;
+    padding: 5px 10px;
+    white-space: nowrap;
+    text-transform: capitalize;
+}

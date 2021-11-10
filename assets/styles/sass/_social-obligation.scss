@@ -1,0 +1,62 @@
+.social-obligation {
+    position: relative;
+    padding-bottom: 50px;
+    &::before {
+        position: absolute;
+        content: '';
+        background: url(../../images/dots.png) no-repeat center;
+        width: 285px;
+        height: 217px;
+        top: 15%;
+        right: -8%;
+        transform: rotateZ(90deg) scale(0.8);
+    }
+
+    h2 {
+        padding-bottom: 50px;
+    }
+
+    .social-row {
+        align-items: center;
+        .social-text {
+            font-family: $font_secondary;
+            font-weight: 300;
+            padding: 0px 7%;
+            align-items: center;
+            span {
+                color: #942C8E;
+                font-weight: 700;
+            }
+        }
+
+        .social-images {
+            .row {
+                justify-content: center;
+                align-items: center;
+                img {
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .blobs {
+        position: absolute;
+        bottom: 40%;
+        right: -20px;
+        svg:first-child() {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite ;
+        }
+        svg:nth-child(2) {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite alternate-reverse;
+        }
+        svg:last-child() {
+            transition: all 1s ease-out;
+            animation: flying 20s linear infinite;
+        }
+
+    }
+
+}

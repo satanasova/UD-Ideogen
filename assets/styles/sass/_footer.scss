@@ -1,0 +1,36 @@
+//footer
+.footer {
+    &-top {
+        padding: 50px 0;
+
+        &-row {
+            justify-content: space-between;
+        }
+
+        &-col {
+            width: max-content;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            h6 {
+                width: 233.5px;
+                margin: 0 0 0 10px;
+            }
+        }
+
+        &-content {
+            font-family: $font_primary;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 55px;
+            padding-top: 10px;
+            .list {
+                padding-left: 0;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,92 @@
+@keyframes counterMove {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(20px, 5px);
+    }
+    70% {
+        transform: translate(-20px, -5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes lgCardMove {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        transform: translate(-45%, -52%);
+    }
+    75% {
+        transform: translate(-55%, -48%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes mdCardMove {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(5px, 5px);
+    }
+    70% {
+        transform: translate(-5px, -5px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes flying {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    25% {
+        transform: translate(20px, 30px);
+    }   
+    50% {
+        transform: translate(10px, -10px);
+    }
+    75% {
+        transform: translate(-20px, -30px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes videoMove-left {
+    0% {
+        transform: translate(-30%, -50%);
+    }
+    33% {
+        transform: translate(-50%, -50%);
+    }
+    66% {
+        transform: translate(-50%, -70%);
+    }
+    100% {
+        transform: translate(-30%, -50%);
+    }
+}
+
+@keyframes videoMove-right {
+    0% {
+        transform: translate(30%, -50%);
+    }
+    33% {
+        transform: translate(50%, -30%);
+    }
+    66% {
+        transform: translate(50%, -50%);
+    }
+    100% {
+        transform: translate(30%, -50%);
+    }
+}
