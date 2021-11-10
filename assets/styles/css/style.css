@@ -8512,11 +8512,3 @@ h6, .h6 {
     padding-top: 10px; }
     .footer-top-content .list {
       padding-left: 0; }
-
-.footer-bottom {
-  padding: 20px 0; }
-  .footer-bottom-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 60px; }
