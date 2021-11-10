@@ -774,6 +774,38 @@ h6 {
         position: relative;
         justify-content: space-between;
         min-height: 56vw;
+
+        &.show {
+            flex-direction: column !important;
+            justify-content: space-evenly;
+            align-items: end;
+            overflow: hidden;
+            .dna-content {
+                width: 66.6667%;
+                position: relative;
+                right: -50%;
+                // transition: right 1s ease-in;
+                &.move-left {
+                    transition: right 1s ease-in;
+                    right: 0;
+                }
+
+                .content-block {
+                    padding-top: 3rem;
+                }
+
+            }
+            .dna-img {
+                transform: unset;
+                transition: all 1s ease-in;
+                left: 5%;
+
+                @media(max-width: 992px) {
+                    left: -20%;
+                }
+            }
+        }
+
         &::before,
         &::after {
             position: absolute;
@@ -812,6 +844,7 @@ h6 {
 
             img {
                 height: 100%;
+                max-height: 270vw;
             }
         }
 
@@ -830,6 +863,25 @@ h6 {
 
                 p {
                     font-weight: 300;
+                }
+
+                .learn-more {
+                    display: none;
+                    
+                    .btn-primary {
+                        background-color: #942c8e;
+                        border: 1px solid #942c8e;
+                        font-family: $font_primary;
+                        font-size: 15px;
+                        padding: 18px 0;
+                        font-weight: 800;
+                        margin-bottom: 15px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .btn-less {
+                    display: none;
                 }
 
                 .btn-inline {
@@ -944,7 +996,7 @@ h6 {
         background: url(../../images/dots.png) no-repeat center;
         width: 403px;
         height: 217px;
-        top: 32.5%;
+        top: 29%;
         right: 3%;
         transform: scale(0.9);
     }
@@ -965,12 +1017,6 @@ h6 {
                 transform: translateX(0px);
             }
 
-            .carousel-bg {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
             .carousel {
                 &-inner {
                     margin: 0 auto;

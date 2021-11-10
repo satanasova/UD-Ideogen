@@ -1,23 +1,28 @@
 import '../../node_modules/jquery/dist/jquery.min.js';
-import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
-$('.history-row').each(function(){
-    $(this).addClass('currentElement');
-    $(this).find('.history-date').addClass('currentElement');
+import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
 
-    const controller = new ScrollMagic.Controller();
+function historyAnimation() {
+    $('.history-row').each(function(){
+        $(this).addClass('currentElement');
+        $(this).find('.history-date').addClass('currentElement');
+    
+        const controller = new ScrollMagic.Controller();
+    
+        const scene = new ScrollMagic.Scene({
+            triggerElement: this,
+            duration: 0,
+            triggerHook: 2
+        })
+        .setClassToggle('.currentElement', 'show')
+        .addTo(controller)
+    
+        $(this).removeClass('currentElement','show');
+        $(this).find('.history-date').removeClass('currentElement','show');
+    })    
+}
 
-    const scene = new ScrollMagic.Scene({
-        triggerElement: this,
-        duration: 0,
-        triggerHook: 2
-    })
-    .setClassToggle('.currentElement', 'show')
-    .addTo(controller)
-
-    $(this).removeClass('currentElement','show');
-    $(this).find('.history-date').removeClass('currentElement','show');
-})
+historyAnimation();
 
 function playVideo() {
     $('.video').on('click', function() {
@@ -69,4 +74,48 @@ function playVideo() {
         .addTo(controller);
  }
 
- rotateDna()
+ rotateDna();
+
+ function learnMore() {
+     $('.help').on('click', function(e){
+        const target = $(e.target);
+        const helpRow = $('.help-row');
+        const dnaContent = $('.dna-content');
+        const hiddenContents = $('.learn-more');
+        const btnsMore = $('.btn-more');
+        const btnsLess = $('.btn-less');
+
+        if (target.hasClass('btn-more')) {
+            toggleMoreLess();
+        }
+
+        function toggleMoreLess() {
+            const parent = target.closest('.content-block');
+            const currHiddenContent = parent.find('.learn-more');
+            const currBtnMore = parent.find('.btn-more');
+            const currBtnLess = parent.find('.btn-less');
+
+            hiddenContents.each((idx,el) => $(el).hide());
+            btnsLess.each((idx,el) => $(el).hide());
+            btnsMore.each((idx,el) => $(el).show());
+            currHiddenContent.show();
+            currBtnMore.hide();
+            currBtnLess.show();
+
+            helpRow.hide().addClass('show')
+            helpRow.show()
+            dnaContent.addClass('move-left');
+            
+            currBtnLess.on('click', function() {
+                $(this).hide();
+                currBtnMore.show();
+
+                dnaContent.removeClass('move-left');
+                helpRow.removeClass('show');
+                currHiddenContent.hide();
+            })
+        }
+    })
+ }
+
+ learnMore();
