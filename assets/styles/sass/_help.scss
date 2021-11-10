@@ -89,8 +89,6 @@
             z-index: 2;
 
             .content-block {
-                font-family: $font_secondary;
-
                 h4 {
                     margin-bottom: 30px;
                 }
@@ -103,9 +101,9 @@
                     display: none;
                     
                     .btn-primary {
-                        background-color: #942c8e;
-                        border: 1px solid #942c8e;
-                        font-family: $font_primary;
+                        background-color: $color_secondary;
+                        border: 1px solid $color_secondary;
+                        font-family: $font_title;
                         font-size: 15px;
                         padding: 18px 0;
                         font-weight: 800;
@@ -119,7 +117,7 @@
                 }
 
                 .btn-inline {
-                    color: #942C8E;
+                    color: $color_secondary;
                     font-weight: 700;
                     &:focus {
                         box-shadow: none;

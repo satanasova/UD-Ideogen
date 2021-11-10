@@ -19,12 +19,11 @@
     .social-row {
         align-items: center;
         .social-text {
-            font-family: $font_secondary;
             font-weight: 300;
             padding: 0px 7%;
             align-items: center;
             span {
-                color: #942C8E;
+                color: $color_secondary;
                 font-weight: 700;
             }
         }
