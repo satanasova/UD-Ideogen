@@ -1,6 +1,10 @@
 import '../../node_modules/jquery/dist/jquery.min.js';
 
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
+historyAnimation();
+playVideo();
+rotateDna();
+learnMore();
 
 function historyAnimation() {
     $('.history-row').each(function(){
@@ -22,8 +26,6 @@ function historyAnimation() {
     })    
 }
 
-historyAnimation();
-
 function playVideo() {
     $('.video').on('click', function() {
         const video =  $('.video-mp4').get(0);
@@ -37,8 +39,6 @@ function playVideo() {
         }
     });
  }
-
- playVideo();
 
  function rotateDna() {
     var images = [
@@ -73,8 +73,6 @@ function playVideo() {
         .setTween(tween)
         .addTo(controller);
  }
-
- rotateDna();
 
  function learnMore() {
      $('.help').on('click', function(e){
@@ -117,5 +115,3 @@ function playVideo() {
         }
     })
  }
-
- learnMore();
