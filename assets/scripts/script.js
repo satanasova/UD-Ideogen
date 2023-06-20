@@ -39,14 +39,14 @@ function playVideo() {
 
  function rotateDna() {
     var images = [
-        "../assets/images/dna/1.png",
-        "../assets/images/dna/2.png",
-        "../assets/images/dna/3.png",
-        "../assets/images/dna/4.png",
-        "../assets/images/dna/5.png",
-        "../assets/images/dna/6.png",
-        "../assets/images/dna/7.png",
-        "../assets/images/dna/8.png",
+        "assets/images/dna/1.png",
+        "assets/images/dna/2.png",
+        "assets/images/dna/3.png",
+        "assets/images/dna/4.png",
+        "assets/images/dna/5.png",
+        "assets/images/dna/6.png",
+        "assets/images/dna/7.png",
+        "assets/images/dna/8.png",
     ];
     var obj = { curImg: 0 };
     
