@@ -7992,6 +7992,8 @@ h6, .h6 {
     color: white;
     width: 100%;
     border: none; }
+    .header-mobile-menu .offcanvas.show {
+      visibility: visible; }
     .header-mobile-menu .offcanvas-body {
       padding: 0; }
       .header-mobile-menu .offcanvas-body .mobile-nav {
@@ -8023,7 +8025,7 @@ h6, .h6 {
       content: '';
       width: 102px;
       height: 819px;
-      background: url(../../images/mobile-dots.svg);
+      background: url(images/mobile-dots.svg);
       top: 0;
       left: 0; }
     .header-mobile-menu .offcanvas::after {
@@ -8031,7 +8033,7 @@ h6, .h6 {
       content: '';
       width: 342px;
       height: 137px;
-      background: url(../../images/mobile-oval.svg);
+      background: url(images/mobile-oval.svg);
       bottom: 0;
       left: 0; }
 
